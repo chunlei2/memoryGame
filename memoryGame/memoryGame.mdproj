@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ItemType>GenericProject</ItemType>
+    <ProjectGuid>{DCDAFCE3-D854-4E9F-9D94-ACE3BF013FA9}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".DS_Store" />
+    <None Include=".Rhistory" />
+    <None Include=".gitattributes" />
+    <None Include="CONTRIBUTING.md" />
+    <None Include="README.md" />
+    <None Include="index.html" />
+    <None Include="css\README.md" />
+    <None Include="css\app.css" />
+    <None Include="img\geometry2.png" />
+    <None Include="js\README.md" />
+    <None Include="js\app.js" />
+  </ItemGroup>
+</Project>
