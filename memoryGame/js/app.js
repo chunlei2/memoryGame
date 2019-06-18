@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Create a list that holds all of your cards
  */
 const currentCards = []
@@ -37,7 +37,11 @@ function shuffle(array) {
  
 // record number of displayed
  var countCards = 0; 
- 
+
+
+// The reason I don't use openCards.length to count number of cards is I use setTimeout later
+// So it may be possible that that card has been opened, you can't open more cards, but
+// the card hasn't been added to the openCards array yet.
  var moveCount = 0;
 
  
