@@ -72,7 +72,7 @@ function stopCount() {
 startCount();
 
 // Click the restart button
-document.querySelector(".restart").onclick = function() {
+function restart() {
 	// shuffle the cards
 	const shuffledCards = shuffle(currentCards);
 	// assign shuffled class name to each card
@@ -83,14 +83,19 @@ document.querySelector(".restart").onclick = function() {
 
 	}
 	// restart the moves
-	document.querySelector(".moves").innerHTML = 0;
+    document.querySelector(".moves").innerHTML = 0;
+    document.querySelector(".stars").innerHTML = "<li><i class=\"fa fa-star\"></i></li>" +
+        "<li><i class=\"fa fa-star\"></i></li>" +
+            "<li><i class=\"fa fa-star\"></i></li>"
 	moveCount = 0;
 	countCards = 0;
 	openCards = [];
 	stopCount();
 	c = 0;
 	startCount();
-}
+ }
+
+document.querySelector(".restart").onclick = function () { restart();}
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -137,7 +142,10 @@ document.querySelector(".restart").onclick = function() {
 			}
 		}
  }
- 
+
+function removeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
 
 // add click event to deck
 document.querySelector(".deck").addEventListener('click', function(event) {
@@ -188,3 +196,11 @@ document.querySelector(".deck").addEventListener('click', function(event) {
 		
 	}
 })
+
+
+
+document.querySelector(".subB").onclick = function () {
+    restart();
+    removeModal();
+}
+
